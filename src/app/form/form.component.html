@@ -1,0 +1,8 @@
+<form [formGroup]="user" (ngSubmit)="submit()">
+    <input type="text" formControlName="username" placeholder="enter username"><br>
+    <span *ngIf="username && username.invalid && !username.untouched">this field is required </span> <br>
+    <input type="password" formControlName="password" placeholder="enter password"> <br>
+    <span *ngIf="pass && pass.invalid && !pass.untouched">this field is required </span> <br>
+    <p *ngIf ="error">{{errormsg}}</p>
+    <button>login</button>
+</form>

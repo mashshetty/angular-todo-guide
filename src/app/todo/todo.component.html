@@ -1,0 +1,17 @@
+
+<div ng-app="" ng-init="b=true">
+<div>
+    <h1>{{name}}</h1>
+    <input name="name" [(ngModel)]="todo.title" type="text" >
+    <button (click)="add(todo.title)">add</button>
+</div>
+<div *ngIf ="todos.length==0">
+todo list is empty!!
+</div>
+
+
+<div *ngFor = "let todo of todos">
+    <div>{{todo.title}} <button (click)="edit(todo)" >edit</button>  <button (click)="delete(todo)" >delete</button> </div>
+    
+</div>
+</div>

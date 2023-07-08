@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo';
+  datapass:string = 'data pass from parent to child';
+  propfromchild:string =''
+  getdata(data:any):void{
+      console.warn(data)
+      this.propfromchild = data
+  }
 }
